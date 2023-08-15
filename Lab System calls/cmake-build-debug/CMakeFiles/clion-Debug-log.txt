@@ -1,0 +1,1 @@
+在 /home/pedestrian1/Desktop/MIT6.1810/xv6-labs-2022 中找不到 CMakeLists.txt 选择 CMakeLists.txt
