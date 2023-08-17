@@ -90,8 +90,10 @@ struct proc
 
     // Pedestrian1 add.
     int alarm_interval;
-
-    void (*handler_pointer)();
+    int ticks_count;
+    uint64 handler_pointer;
+    int in_alarm;
+    struct trapframe alarm_frame;
 
     struct spinlock lock;
 

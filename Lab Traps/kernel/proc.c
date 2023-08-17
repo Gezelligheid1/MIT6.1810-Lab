@@ -132,7 +132,8 @@ allocproc(void)
 
     // Pedestrian1 add.
     p->alarm_interval = 0;
-    p->handler_pointer = NULL;
+    p->handler_pointer = 0;
+    p->in_alarm = 0;
 
     p->pid = allocpid();
     p->state = USED;
@@ -184,7 +185,7 @@ freeproc(struct proc *p)
     p->xstate = 0;
     p->state = UNUSED;
     p->alarm_interval = 0;
-    p->handler_pointer = NULL;
+    p->handler_pointer = 0;
 }
 
 // Create a user page table for a given process, with no user memory,
